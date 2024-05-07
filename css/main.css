@@ -1,0 +1,583 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/reality-hyper");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Darker Grotesque", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.text_hover:hover {
+  color: #EB4C56;
+  cursor: pointer;
+  border-bottom: 1px solid #EB4C56;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.animation:hover {
+  transform: scale(1.1);
+  transition-duration: 0.9s;
+}
+
+.fill_red:hover {
+  fill: #EB4C56;
+  cursor: pointer;
+}
+
+.svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+}
+
+.header {
+  width: 100%;
+  min-height: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: black;
+  align-items: center;
+  color: white;
+  padding: 0 6vw;
+  border-bottom: 1px solid white;
+}
+.header .header_icon {
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: column;
+  justify-self: end;
+}
+.header .header_icon svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  cursor: pointer;
+}
+.header .nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
+}
+
+.main_baner {
+  color: white;
+  background-color: rgb(23, 22, 22);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 0;
+  gap: 40px;
+}
+.main_baner .baner_content_box {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: "baner_icon  logo_text1 " "baner_icon  logo_text2 " "baner_icon  baner_desc" "baner_icon  baner_btn" "baner_icon  iframe";
+}
+.main_baner .baner_content_box .logo_text1 {
+  grid-area: logo_text1;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 105px;
+  font-weight: 700;
+  align-self: end;
+  justify-items: end;
+  z-index: 9;
+}
+.main_baner .baner_content_box .logo_text2 {
+  grid-area: logo_text2;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: end;
+  justify-self: start;
+  margin-left: 189px;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: start;
+  z-index: 8;
+}
+.main_baner .baner_content_box .baner_desc {
+  grid-area: baner_desc;
+  width: 388px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: left;
+  margin: 40px 0;
+  z-index: 6;
+}
+.main_baner .baner_content_box .baner_btn {
+  grid-area: baner_btn;
+  font-size: Poppins;
+  width: 151px;
+  height: 57px;
+  padding: 15px 32px;
+  align-self: center;
+  justify-self: start;
+  text-align: center;
+  background-color: #EB4C56;
+  text-decoration: none;
+  color: white;
+  z-index: 5;
+  cursor: pointer;
+}
+.main_baner .baner_content_box iframe {
+  grid-area: iframe;
+  width: 152px;
+  align-self: center;
+  justify-self: center;
+  height: 100px;
+  margin-top: 93px;
+  margin-bottom: 121px;
+  z-index: 4;
+}
+.main_baner .baner_content_box .baner_icon {
+  grid-area: baner_icon;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  gap: 24px;
+  margin: 0px 40px 60px 70px;
+}
+.main_baner .baner_content_box .baner_icon svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+.main_baner .baner_img_box {
+  width: 100%;
+  position: relative;
+}
+.main_baner .baner_img_box .baner_gray_box {
+  width: 100%;
+  height: 80%;
+  background-color: #2f2e30;
+  align-items: center;
+  justify-self: end;
+}
+.main_baner .baner_img_box .baner_img {
+  position: absolute;
+  width: 700px;
+  height: 530px;
+  top: 0;
+  right: 0px;
+}
+
+.bike_container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 51px;
+  grid-template-areas: 2fr/2fr;
+  margin-top: 100px;
+}
+.bike_container .category_description_box {
+  display: grid;
+  grid-auto-columns: 2fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+}
+.bike_container .category_description_box .bike_category_title {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Butler;
+  font-size: 64px;
+  font-weight: 500;
+  text-align: left;
+}
+.bike_container .category_description_box .category_nav {
+  justify-self: center;
+}
+.bike_container .category_description_box .category_nav .nav_title {
+  font-family: Lota Grotesque;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39.2px;
+}
+.bike_container .category_description_box .category_nav .bike_category_nav {
+  font-family: Lota Grotesque;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+.bike_container .category_description_box .category_nav .bike_category_nav li {
+  margin-top: 10px;
+}
+.bike_container .bike_category_card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 50px;
+  grid-auto-flow: row;
+  grid-template-areas: "bike_card_left bike_card_right" "card_navigation bike_card_right";
+}
+.bike_container .bike_card_left {
+  grid-area: bike_card_left;
+  width: 100%;
+}
+.bike_container .bike_card_right {
+  grid-area: bike_card_right;
+  width: 100%;
+}
+.bike_container .card_navigation {
+  grid-area: card_navigation;
+  display: flex;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.bike_container .card_navigation .card_navigation_item::before {
+  content: url(/img/Line\ 25.png);
+}
+.bike_container .card_navigation .card_navigation_item::after {
+  content: url(/img/Line\ 25.png);
+}
+
+.card_price_container {
+  width: 100%;
+  margin: 50px auto;
+}
+.card_price_container .card_price_description {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "card_price_title card_price_article";
+}
+.card_price_container .card_price_title {
+  grid-area: card_price_title;
+  font-size: 54px;
+  font-weight: 500;
+  text-align: left;
+}
+.card_price_container .card_price_article {
+  grid-area: card_price_article;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 33px;
+  justify-self: center;
+  text-align: left;
+}
+.card_price_container .card_price_box {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  grid-template-areas: "card_price_item1 card_price_item2";
+}
+.card_price_container .card_price_item1 {
+  grid-area: card_price_item1;
+  position: relative;
+  width: 100%;
+}
+.card_price_container .card_price_item1 .card_price_img {
+  width: 100%;
+}
+.card_price_container .price_title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+.card_price_container .price {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  z-index: 2;
+}
+.card_price_container .card_price_item2 {
+  grid-area: card_price_item2;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.card_price_container .card_price_item2 .card_price_img {
+  width: 100%;
+}
+.card_price_container .card_price_box2 {
+  width: 80%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  justify-items: end;
+  grid-template-areas: "card_price_item3 card_price_item4";
+}
+.card_price_container .card_price_item3 {
+  grid-area: card_price_item3;
+  position: relative;
+  width: 100%;
+}
+.card_price_container .card_price_item3 .card_price_img {
+  width: 100%;
+}
+.card_price_container .card_price_item4 {
+  grid-area: card_price_item4;
+  position: relative;
+  width: 100%;
+}
+.card_price_container .card_price_item4 .card_price_img {
+  width: 100%;
+}
+.card_price_container .card_price_item4 svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+}
+.card_price_container .card_price_btn {
+  display: flex;
+  width: 156px;
+  height: 57px;
+  padding: 12px 32px 12px 32px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #2f2e30;
+}
+
+.information_baner {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.6fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas: "information_baner_logo information_baner_logo information_baner_logo" "information_baner_card information_baner_card information_baner_card" "information_baner_desc information_baner_desc information_baner_desc";
+}
+.information_baner .information_baner_logo {
+  grid-area: information_baner_logo;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  align-items: center;
+  gap: 0 10px;
+  margin-bottom: 40px;
+  grid-template-areas: "logo_item1 logo_item2 logo_item3 logo_item4 logo_item5 logo_item6";
+}
+.information_baner .information_baner_logo .logo_item1 {
+  grid-area: logo_item1;
+}
+.information_baner .information_baner_logo .logo_item2 {
+  grid-area: logo_item2;
+}
+.information_baner .information_baner_logo .logo_item3 {
+  grid-area: logo_item3;
+}
+.information_baner .information_baner_logo .logo_item4 {
+  grid-area: logo_item4;
+}
+.information_baner .information_baner_logo .logo_item5 {
+  grid-area: logo_item5;
+}
+.information_baner .information_baner_logo .logo_item6 {
+  grid-area: logo_item6;
+}
+.information_baner .information_baner_card {
+  display: grid;
+  height: -moz-fit-content;
+  height: fit-content;
+  grid-area: information_baner_card;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.9fr 0.2fr;
+  gap: 0px 80px;
+  grid-template-areas: "information_baner_img baner_card_title" "information_baner_img baner_card_decs" "information_baner_img baner_card_nav";
+}
+.information_baner .information_baner_card .information_baner_img {
+  align-self: center;
+  justify-self: start;
+  width: 100%;
+  grid-area: information_baner_img;
+}
+.information_baner .information_baner_card .baner_card_title {
+  grid-area: baner_card_title;
+  align-self: flex-end;
+  font-family: Butler;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: left;
+}
+.information_baner .information_baner_card .baner_card_decs {
+  grid-area: baner_card_decs;
+  font-family: Lota Grotesque;
+  max-width: 430px;
+  font-size: 22px;
+  font-weight: 300;
+  text-align: left;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+.information_baner .information_baner_card .baner_card_nav {
+  grid-area: baner_card_nav;
+  font-family: Lota Grotesque;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  text-align: left;
+  align-items: flex-start;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.information_baner .information_baner_desc {
+  grid-area: information_baner_desc;
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: center;
+  gap: 0 50px;
+}
+.information_baner .information_baner_desc .baner_desc_item {
+  width: -moz-max-content;
+  width: max-content;
+}
+.information_baner .information_baner_desc .description_title1,
+.information_baner .information_baner_desc .description_title2,
+.information_baner .information_baner_desc .description_title3 {
+  text-align: left;
+  font-family: Butler;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: left;
+  margin: 90px 0 24px 0;
+}
+.information_baner .information_baner_desc .decription_text1,
+.information_baner .information_baner_desc .decription_text2,
+.information_baner .information_baner_desc .decription_text3 {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 33px;
+  text-align: left;
+  margin-bottom: 100px;
+}
+
+.footer {
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  background-color: #2f2e30;
+  min-height: 453px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "footer_registration footer_company_list footer_support_list";
+}
+.footer .footer_li {
+  font-family: Lota Grotesque;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.footer .footer_registration {
+  width: auto;
+  grid-area: footer_registration;
+  margin-left: 100px;
+}
+.footer .footer_registration .register_title {
+  color: white;
+  font-family: Lota Grotesque;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  margin-bottom: 26px;
+}
+.footer .footer_registration .footer_input {
+  color: white;
+  width: 300px;
+  font-family: Lota Grotesque;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  background-color: rgb(229, 228, 228);
+  border: none;
+  margin-bottom: 112px;
+  margin-right: 100px;
+}
+.footer .footer_registration .footer_input .footer_input:-moz-placeholder-shown {
+  color: white;
+}
+.footer .footer_registration .footer_input .footer_input:placeholder-shown {
+  color: white;
+}
+.footer .footer_registration .footer_simbol_list {
+  width: auto;
+  display: flex;
+}
+.footer .footer_registration .footer_simbol_list li {
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.footer .footer_registration .footer_simbol_list li:hover > svg {
+  fill: #EB4C56;
+}
+.footer .footer_registration .footer_simbol_list li svg {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  width: 17px;
+  height: 17px;
+  fill: white;
+}
+.footer .footer_company_list {
+  grid-area: footer_company_list;
+  margin-right: 150px;
+  color: white;
+}
+.footer .footer_company_list .company_title {
+  margin-bottom: 26px;
+  font-family: Lota Grotesque;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+.footer .footer_support_list {
+  grid-area: footer_support_list;
+  color: white;
+}
+.footer .footer_support_list .support_title {
+  margin-bottom: 26px;
+  font-family: Lota Grotesque;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}/*# sourceMappingURL=main.css.map */
