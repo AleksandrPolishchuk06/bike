@@ -286,11 +286,11 @@ body {
         height: fit-content;
 
         .card_navigation_item::before {
-            content: url(/img/Line\ 25.png);
+            content: url(./img/Line\ 25.png);
         }
 
         .card_navigation_item::after {
-            content: url(/img/Line\ 25.png);
+            content: url(./img/Line\ 25.png);
         }
     }
 }

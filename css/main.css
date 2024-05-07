@@ -243,10 +243,10 @@ body {
   height: fit-content;
 }
 .bike_container .card_navigation .card_navigation_item::before {
-  content: url(/img/Line\ 25.png);
+  content: url(./img/Line\ 25.png);
 }
 .bike_container .card_navigation .card_navigation_item::after {
-  content: url(/img/Line\ 25.png);
+  content: url(./img/Line\ 25.png);
 }
 
 .card_price_container {
