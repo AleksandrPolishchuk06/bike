@@ -180,9 +180,8 @@ body {
   margin: 0 auto;
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-rows: 0.5fr 1.5fr;
+  grid-template-rows: auto;
   gap: 0px 51px;
-  grid-template-areas: 2fr/2fr;
   margin-top: 100px;
 }
 .bike_container .category_description_box {
@@ -193,6 +192,8 @@ body {
   margin-bottom: 20px;
 }
 .bike_container .category_description_box .bike_category_title {
+  height: -moz-fit-content;
+  height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-family: Butler;
@@ -201,9 +202,13 @@ body {
   text-align: left;
 }
 .bike_container .category_description_box .category_nav {
+  height: -moz-fit-content;
+  height: fit-content;
   justify-self: center;
 }
 .bike_container .category_description_box .category_nav .nav_title {
+  height: -moz-fit-content;
+  height: fit-content;
   font-family: Lota Grotesque;
   font-size: 28px;
   font-weight: 500;
@@ -240,13 +245,13 @@ body {
   grid-area: card_navigation;
   display: flex;
   justify-content: center;
+  vertical-align: middle;
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
 }
 .bike_container .card_navigation .card_navigation_item::before {
   content: url(/img/line.png);
-  vertical-align: top;
-  height: 100%;
 }
 .bike_container .card_navigation .card_navigation_item::after {
   content: url(/img/line.png);
@@ -371,7 +376,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.4fr 0.6fr;
-  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-template-areas: "information_baner_logo information_baner_logo information_baner_logo" "information_baner_card information_baner_card information_baner_card" "information_baner_desc information_baner_desc information_baner_desc";
 }
@@ -452,6 +457,7 @@ body {
   height: fit-content;
 }
 .information_baner .information_baner_desc {
+  width: 100%;
   grid-area: information_baner_desc;
   display: grid;
   grid-auto-flow: column;
@@ -459,8 +465,7 @@ body {
   gap: 0 30px;
 }
 .information_baner .information_baner_desc .baner_desc_item {
-  width: -moz-max-content;
-  width: max-content;
+  width: 100%;
   justify-self: center;
 }
 .information_baner .information_baner_desc .description_title1,
@@ -505,9 +510,11 @@ body {
   margin-bottom: 5px;
 }
 .footer .footer_registration {
-  width: auto;
+  width: -moz-fit-content;
+  width: fit-content;
   grid-area: footer_registration;
-  margin-left: 100px;
+  justify-items: center;
+  margin-left: 10px;
 }
 .footer .footer_registration .register_title {
   color: white;
@@ -529,7 +536,6 @@ body {
   background-color: rgb(229, 228, 228);
   border: none;
   margin-bottom: 112px;
-  margin-right: 100px;
 }
 .footer .footer_registration .footer_input .footer_input:-moz-placeholder-shown {
   color: white;
@@ -538,7 +544,7 @@ body {
   color: white;
 }
 .footer .footer_registration .footer_simbol_list {
-  width: auto;
+  width: 100%;
   display: flex;
 }
 .footer .footer_registration .footer_simbol_list li {
@@ -563,7 +569,6 @@ body {
 }
 .footer .footer_company_list {
   grid-area: footer_company_list;
-  margin-right: 150px;
   color: white;
 }
 .footer .footer_company_list .company_title {
@@ -577,6 +582,7 @@ body {
 .footer .footer_support_list {
   grid-area: footer_support_list;
   color: white;
+  width: 100%;
 }
 .footer .footer_support_list .support_title {
   margin-bottom: 26px;
