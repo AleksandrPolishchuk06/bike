@@ -37,8 +37,8 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: grid;
 }
 
@@ -190,6 +190,7 @@ body {
   grid-auto-columns: 2fr;
   grid-template-columns: 1fr 1fr;
   gap: 0px 0px;
+  margin-bottom: 20px;
 }
 .bike_container .category_description_box .bike_category_title {
   width: -moz-fit-content;
@@ -243,10 +244,12 @@ body {
   height: fit-content;
 }
 .bike_container .card_navigation .card_navigation_item::before {
-  content: url(./img/Line\ 25.png);
+  content: url(/img/line.png);
+  vertical-align: top;
+  height: 100%;
 }
 .bike_container .card_navigation .card_navigation_item::after {
-  content: url(./img/Line\ 25.png);
+  content: url(/img/line.png);
 }
 
 .card_price_container {
@@ -376,7 +379,7 @@ body {
   grid-area: information_baner_logo;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
   gap: 0 10px;
   margin-bottom: 40px;
@@ -406,13 +409,13 @@ body {
   height: fit-content;
   grid-area: information_baner_card;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.9fr 0.2fr;
+  grid-template-rows: 1.2fr 0.9fr 0.6fr;
   gap: 0px 80px;
   grid-template-areas: "information_baner_img baner_card_title" "information_baner_img baner_card_decs" "information_baner_img baner_card_nav";
 }
 .information_baner .information_baner_card .information_baner_img {
   align-self: center;
-  justify-self: start;
+  justify-self: center;
   width: 100%;
   grid-area: information_baner_img;
 }
@@ -438,6 +441,7 @@ body {
 }
 .information_baner .information_baner_card .baner_card_nav {
   grid-area: baner_card_nav;
+  align-items: start;
   font-family: Lota Grotesque;
   font-size: 22px;
   font-weight: 400;
@@ -452,11 +456,12 @@ body {
   display: grid;
   grid-auto-flow: column;
   justify-self: center;
-  gap: 0 50px;
+  gap: 0 30px;
 }
 .information_baner .information_baner_desc .baner_desc_item {
   width: -moz-max-content;
   width: max-content;
+  justify-self: center;
 }
 .information_baner .information_baner_desc .description_title1,
 .information_baner .information_baner_desc .description_title2,
@@ -580,4 +585,12 @@ body {
   font-weight: 400;
   line-height: 30px;
   text-align: left;
+}
+
+@media (max-width: 860px) {
+  .information_baner .information_baner_logo {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logo_item1 logo_item2 logo_item3" "logo_item4 logo_item5 logo_item6";
+  }
 }/*# sourceMappingURL=main.css.map */
