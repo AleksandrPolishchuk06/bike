@@ -15,6 +15,9 @@ $footer_bg_color: #2f2e30;
 $fill_svg_body_color: white;
 
 
+
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -322,6 +325,7 @@ body {
     .card_price_title {
         grid-area: card_price_title;
         font-size: 54px;
+
         font-weight: 500;
         text-align: left;
     }
@@ -517,13 +521,13 @@ body {
             font-family: Butler;
             font-size: 40px;
             font-weight: 500;
-            line-height: 64px;
             text-align: left;
         }
 
         .baner_card_decs {
             grid-area: baner_card_decs;
             font-family: Lota Grotesque;
+            align-self: center;
             max-width: 430px;
             font-size: 22px;
             font-weight: 300;
@@ -706,13 +710,200 @@ body {
 
 }
 
-@media(max-width:860px) {
+@media(min-width:461px) and (max-width:860px) {
     .information_baner {
         .information_baner_logo {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-template-areas: "logo_item1 logo_item2 logo_item3"
                 "logo_item4 logo_item5 logo_item6";
+            gap: 0 10px;
         }
+
+        .information_baner_desc {
+            gap: 0 10px;
+        }
+    }
+}
+
+@media(max-width:460px) {
+    .header {
+        position: relative;
+        padding: 0;
+    }
+
+    .main_baner {
+        grid-template-columns: 1fr;
+
+        .baner_content_box {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-areas:
+                "logo_text1 logo_text1 "
+                "logo_text2 logo_text2 "
+                "logo_text2 baner_desc"
+                "baner_icon baner_btn"
+                "baner_icon iframe";
+
+            .logo_text1,
+            .logo_text2,
+            .baner_btn {
+                align-items: center;
+                text-align: right;
+            }
+        }
+
+        .baner_img_box {
+
+            .baner_gray_box {
+                display: none;
+            }
+
+            .baner_img {
+                position: absolute;
+                width: 100%;
+                top: -800px;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    .bike_container {
+        width: 100%;
+
+        .category_description_box {
+
+            .bike_category_title {
+                margin-left: 5px;
+                font-size: 34px;
+                align-self: center;
+            }
+        }
+
+        .bike_category_card {
+
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.8fr 0.2fr 1fr;
+            grid-template-areas:
+                "bike_card_left"
+                "card_navigation"
+                "bike_card_right";
+        }
+
+        .card_price_container {
+            .card_price_title {
+                grid-area: card_price_title;
+                font-size: 34px;
+                font-weight: 500;
+                font-family: Butler;
+                align-self: center;
+            }
+        }
+    }
+
+    .information_baner {
+        .information_baner_logo {
+            justify-self: center;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: "logo_item1 logo_item2"
+                "logo_item3 logo_item4"
+                " logo_item5 logo_item6";
+            gap: 0 20px;
+        }
+
+        .information_baner_card {
+            justify-items: center;
+            display: grid;
+            grid-area: information_baner_card;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+            gap: 0px 0px;
+            grid-template-areas:
+                "baner_card_title"
+                "information_baner_img"
+                "information_baner_img "
+                "information_baner_img "
+                "baner_card_decs"
+                "baner_card_nav";
+        }
+
+        .information_baner_desc {
+            justify-items: center;
+
+            width: 100%;
+            grid-area: information_baner_desc;
+            display: grid;
+            grid-auto-flow: row;
+            margin-bottom: 20px;
+
+            .baner_desc_item {
+
+
+                .description_title1,
+                .decription_text1,
+                .decription_text2,
+                .decription_text3,
+                .description_title2,
+                .description_title3 {
+                    margin: 0;
+
+                }
+            }
+        }
+
+    }
+
+    .card_price_container {
+        .card_price_box {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.8fr 1.2fr;
+            grid-template-areas: "card_price_item1"
+                " card_price_item2";
+        }
+
+        .card_price_box2 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "card_price_item3"
+                "card_price_item4";
+        }
+    }
+
+    .footer {
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        min-height: 150px;
+        background-color: #2f2e30;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: "footer_registration ";
+
+        .footer_registration {
+            .footer_input {
+                margin-bottom: 20px;
+            }
+
+            .footer_simbol_list {
+                width: 100%;
+                justify-content: center;
+            }
+
+        }
+
+        .footer_company_list,
+        .footer_support_list {
+            display: none;
+        }
+
+
     }
 }
