@@ -37,8 +37,8 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: grid;
 }
 
@@ -119,7 +119,7 @@ body {
 }
 .main_baner .baner_content_box .baner_btn {
   grid-area: baner_btn;
-  font-size: Poppins;
+  font-size: 20px;
   width: 151px;
   height: 57px;
   padding: 15px 32px;
