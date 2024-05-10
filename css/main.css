@@ -642,12 +642,16 @@ body {
     font-family: Butler;
     align-self: center;
   }
+  .information_baner {
+    width: 100%;
+  }
   .information_baner .information_baner_logo {
     justify-self: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "logo_item1 logo_item2" "logo_item3 logo_item4" " logo_item5 logo_item6";
     gap: 0 20px;
+    margin: 0;
   }
   .information_baner .information_baner_card {
     width: 100%;
@@ -659,9 +663,12 @@ body {
     gap: 0px 0px;
     grid-template-areas: "baner_card_title" "information_baner_img" "information_baner_img " "information_baner_img " "baner_card_decs" "baner_card_nav";
   }
+  .information_baner .information_baner_card .baner_card_title {
+    margin-bottom: 10px;
+  }
   .information_baner .information_baner_desc {
+    width: 90%;
     justify-items: center;
-    width: 100%;
     grid-area: information_baner_desc;
     display: grid;
     grid-auto-flow: row;
@@ -674,6 +681,7 @@ body {
   .information_baner .information_baner_desc .baner_desc_item .description_title2,
   .information_baner .information_baner_desc .baner_desc_item .description_title3 {
     margin: 0;
+    text-align: center;
   }
   .card_price_container .card_price_box {
     width: 100%;

@@ -788,6 +788,8 @@ body {
     }
 
     .information_baner {
+        width: 100%;
+
         .information_baner_logo {
             justify-self: center;
             grid-template-columns: 1fr 1fr;
@@ -796,6 +798,7 @@ body {
                 "logo_item3 logo_item4"
                 " logo_item5 logo_item6";
             gap: 0 20px;
+            margin: 0;
         }
 
         .information_baner_card {
@@ -813,12 +816,15 @@ body {
                 "information_baner_img "
                 "baner_card_decs"
                 "baner_card_nav";
+
+            .baner_card_title {
+                margin-bottom: 10px;
+            }
         }
 
         .information_baner_desc {
+            width: 90%;
             justify-items: center;
-
-            width: 100%;
             grid-area: information_baner_desc;
             display: grid;
             grid-auto-flow: row;
@@ -834,6 +840,7 @@ body {
                 .description_title2,
                 .description_title3 {
                     margin: 0;
+                    text-align: center;
 
                 }
             }
