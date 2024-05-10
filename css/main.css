@@ -37,8 +37,8 @@
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: grid;
 }
 
@@ -598,19 +598,38 @@ body {
     position: relative;
     padding: 0;
   }
+  .header .nav {
+    grid-template-columns: repeat(3, 0.4fr);
+    justify-self: center;
+    gap: 0 10px;
+  }
+  .header .header_icon {
+    gap: 0 3px;
+  }
   .main_baner {
     grid-template-columns: 1fr;
+    padding: 20px;
   }
   .main_baner .baner_content_box {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-areas: "logo_text1 logo_text1 " "logo_text2 logo_text2 " "logo_text2 baner_desc" "baner_icon baner_btn" "baner_icon iframe";
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo_text1 " "logo_text2  " "baner_desc" "iframe" "baner_btn" "baner_icon ";
   }
   .main_baner .baner_content_box .logo_text1,
   .main_baner .baner_content_box .logo_text2,
   .main_baner .baner_content_box .baner_btn {
-    align-items: center;
+    align-items: start;
     text-align: right;
+  }
+  .main_baner .baner_content_box .baner_icon {
+    justify-self: start;
+    flex-direction: row;
+    align-items: end;
+    margin: 0;
+  }
+  .main_baner .baner_content_box .baner_btn {
+    justify-self: center;
+    margin-bottom: 40px;
   }
   .main_baner .baner_img_box .baner_gray_box {
     display: none;
