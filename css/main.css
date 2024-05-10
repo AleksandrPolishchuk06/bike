@@ -9,12 +9,17 @@
   text-decoration: none;
 }
 
+img:hover {
+  box-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 7px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+  cursor: pointer;
+}
+
 .text_hover:hover {
   color: #EB4C56;
   cursor: pointer;
-  border-bottom: 1px solid #EB4C56;
   width: -moz-fit-content;
   width: fit-content;
+  text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 7px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
 }
 
 .animation:hover {
@@ -37,7 +42,6 @@
 }
 
 body {
-  width: 100vw;
   height: 100vh;
   display: grid;
 }
@@ -153,8 +157,13 @@ body {
 }
 .main_baner .baner_content_box .baner_icon svg {
   fill: white;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+}
+.main_baner .baner_content_box .baner_icon svg:hover {
+  box-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 7px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+  border: 1px solid #EB4C56;
+  border-radius: 50%;
 }
 .main_baner .baner_img_box {
   width: 100%;
@@ -169,6 +178,7 @@ body {
 }
 .main_baner .baner_img_box .baner_img {
   position: absolute;
+  box-shadow: none;
   width: 700px;
   height: 530px;
   top: 0;
@@ -555,6 +565,9 @@ body {
   position: relative;
   margin-right: 12px;
   cursor: pointer;
+}
+.footer .footer_registration .footer_simbol_list li:hover {
+  box-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 7px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
 }
 .footer .footer_registration .footer_simbol_list li:hover > svg {
   fill: #EB4C56;

@@ -13,6 +13,7 @@ $main_baner_btn_color_bg: #EB4C56;
 $btn_main_section: #2f2e30;
 $footer_bg_color: #2f2e30;
 $fill_svg_body_color: white;
+$box_shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 7px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
 
 
 
@@ -27,11 +28,17 @@ $fill_svg_body_color: white;
     text-decoration: none;
 }
 
+img:hover {
+    box-shadow: $box_shadow ;
+    cursor: pointer;
+}
+
 .text_hover:hover {
     color: $hover_color;
     cursor: pointer;
-    border-bottom: 1px solid $hover_color;
+    // border-bottom: 1px solid $hover_color;
     width: fit-content;
+    text-shadow: $box_shadow;
 }
 
 .animation:hover {
@@ -42,6 +49,7 @@ $fill_svg_body_color: white;
 .fill_red:hover {
     fill: $hover_color;
     cursor: pointer;
+
 }
 
 .svg {
@@ -54,7 +62,7 @@ $fill_svg_body_color: white;
 }
 
 body {
-    width: 100vw;
+
     height: 100vh;
     display: grid;
     // overflow-x: hidden;
@@ -82,6 +90,8 @@ body {
             height: 24px;
             fill: $main_font_color;
             cursor: pointer;
+
+
         }
     }
 
@@ -180,10 +190,18 @@ body {
             gap: 24px;
             margin: 0px 40px 60px 70px;
 
+
+
             svg {
                 fill: $main_font_color;
-                width: 20px;
-                height: 20px;
+                width: 24px;
+                height: 24px;
+
+                &:hover {
+                    box-shadow: $box_shadow;
+                    border: 1px solid $hover_color;
+                    border-radius: 50%;
+                }
             }
         }
     }
@@ -202,6 +220,7 @@ body {
 
         .baner_img {
             position: absolute;
+            box-shadow: none;
             width: 700px;
             height: 530px;
             top: 0;
@@ -658,6 +677,11 @@ body {
                 position: relative;
                 margin-right: 12px;
                 cursor: pointer;
+
+                &:hover {
+                    box-shadow: $box_shadow;
+
+                }
 
                 &:hover>svg {
                     fill: $hover_color;
