@@ -710,21 +710,6 @@ body {
 
 }
 
-@media(min-width:600px) and (max-width:860px) {
-    .information_baner {
-        .information_baner_logo {
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas: "logo_item1 logo_item2 logo_item3"
-                "logo_item4 logo_item5 logo_item6";
-            gap: 0 10px;
-        }
-
-        .information_baner_desc {
-            gap: 0 10px;
-        }
-    }
-}
 
 @media(max-width:600px) {
     .header {
@@ -907,5 +892,21 @@ body {
         }
 
 
+    }
+}
+
+@media(min-width:601px) and (max-width:860px) {
+    .information_baner {
+        .information_baner_logo {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "logo_item1 logo_item2 logo_item3"
+                "logo_item4 logo_item5 logo_item6";
+            gap: 0 10px;
+        }
+
+        .information_baner_desc {
+            gap: 0 10px;
+        }
     }
 }
